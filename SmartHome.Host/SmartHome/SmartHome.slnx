@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="../SmartHome.BL/SmartHome.BL.csproj" />
+  <Project Path="../SmartHome.DL/SmartHome.DL.csproj" />
+  <Project Path="../SmartHome.Host/SmartHome.Host.csproj" />
+  <Project Path="../SmartHome.Models/SmartHome.Models.csproj" />
+  <Project Path="../SmartHome.Test/SmartHome.Test.csproj" />
+</Solution>
