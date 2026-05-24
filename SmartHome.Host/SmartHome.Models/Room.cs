@@ -1,19 +1,24 @@
-﻿using MongoDB.Bson;
+﻿using MessagePack;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace SmartHome.Models
 {
-    // Променяме "internal" на "public", за да се вижда от другите проекти
+    [MessagePackObject]
     public class Room
     {
-        [BsonId] // Казва на MongoDB, че това е уникалният ключ
-        [BsonRepresentation(BsonType.ObjectId)] // Превръща автоматично ObjectId в string
-        public string Id { get; set; }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        [Key(0)]
+        public string Id { get; set; } = string.Empty;
 
-        public string Name { get; set; }
+        [Key(1)]
+        public string Name { get; set; } = string.Empty;
 
+        [Key(2)]
         public int Floor { get; set; }
 
+        [Key(3)]
         public int Temperature { get; set; }
     }
 }
